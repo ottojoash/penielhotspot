@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="Themes Login Hotspot By Codekece">
+		<meta name="author" content="Shohibul Amin">
+		<link rel="shortcut icon" href="favicon.png">
+		<title>User Info | Codekece Hotel & Resort</title>
+		<link rel="stylesheet" href="assets/css/font-awesome.min.css">
+		<link href="dist/css/bootstrap.min.css" rel="stylesheet">
+		<link href="dist/css/style.css" rel="stylesheet">
+
+		$(if refresh-timeout)
+		<meta http-equiv="refresh" content="$(refresh-timeout-secs)">
+		$(endif)
+
+		<script language="JavaScript">
+		<!--
+		$(if advert-pending == 'yes')
+			var popup = '';
+			function focusAdvert() {
+			if (window.focus) popup.focus();
+			}
+			function openAdvert() {
+			popup = open('$(link-advert)', 'hotspot_advert', '');
+			setTimeout("focusAdvert()", 1000);
+			}
+		$(endif)
+			function openLogout() {
+			if (window.name != 'hotspot_status') return true;
+				open('$(link-logout)', 'hotspot_logout', 'toolbar=0,location=0,directories=0,status=0,menubars=0,resizable=1,width=280,height=250');
+			window.close();
+			return false;
+			}
+		//-->
+		</script>
+	</head>
+	<body $(if advert-pending == 'yes') onLoad="openAdvert()" $(endif)>
+
+		<div class="container">
+			<div class="row">
+				<div class="col-md-offset-4 col-md-4">
+					<div class="panel panel-login">
+						<div class="panel-heading">
+							<h1>user info</h1>
+						</div>
+						<div class="panel-body">	
+							<form action="$(link-logout)" name="logout" onSubmit="return openLogout()">
+								$(if session-time-left)
+								<div class="input-group has-error">
+									<span class="input-group-addon"><i class="fa fa-history fa-fw"></i></span>
+									<input class="form-control" readonly disabled value="$(uptime)">
+								</div>
+								<div style="margin-top:5px;"></div>
+								<div class="input-group has-error">
+									<span class="input-group-addon"><i class="fa fa-clock-o fa-fw"></i></span>
+									<input class="form-control" readonly disabled value="Remaining time $(session-time-left)">
+								</div>						
+								$(endif)
+								
+								$(if login-by == 'trial')
+								<div style="margin-top:5px;"></div>
+								<div class="input-group ">
+									<span class="input-group-addon"><i class="fa fa-user fa-fw"></i></span>
+									<input class="form-control" readonly disabled value="Trial User">
+								</div>
+								$(elif login-by != 'mac')
+								<div style="margin-top:5px;"></div>
+								<div class="input-group ">
+									<span class="input-group-addon"><i class="fa fa-user fa-fw"></i></span>
+									<input class="form-control" readonly disabled value="$(username)">
+								</div>
+								$(endif)
+								
+								<div style="margin-top:5px;"></div>
+								<div class="input-group ">
+									<span class="input-group-addon"><i class="fa fa-star fa-fw"></i></span>
+									<input class="form-control" readonly disabled value="$(ip)">
+								</div>
+								<div style="margin-top:5px;"></div>
+								<div class="input-group ">
+									<span class="input-group-addon"><i class="fa fa-terminal fa-fw"></i></span>
+									<input class="form-control" readonly disabled value="$(mac)">
+								</div>
+								<div style="margin-top:5px;"></div>
+								<div class="input-group ">
+									<span class="input-group-addon"><i class="fa fa-download fa-fw"></i></span>
+									<input class="form-control" readonly disabled value="$(bytes-out-nice)">
+								</div>
+								<div style="margin-top:5px;"></div>
+								<div class="input-group ">
+									<span class="input-group-addon"><i class="fa fa-upload fa-fw"></i></span>
+									<input class="form-control" readonly disabled value="$(bytes-in-nice)">
+								</div>
+								<button type="submit" id="loading-example-btn" data-loading-text="Loading..." class="btn btn-default btn-block">Logout</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="footer">
+			<div class="container">
+				<p class="text-center">
+					&copy; 2017 By penielbeachotel.com
+				</p>
+			</div>
+		</div>
+		
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="dist/js/bootstrap.min.js"></script>	
+		<script src="assets/js/jquery.backstretch.js"></script>
+		<script>
+			$.backstretch([
+			  "img/1.jpg",
+			  "img/2.jpg",
+			  "img/3.jpg"
+			  ], {
+				fade: 750,
+				duration: 4000
+			});
+		</script>
+
+	</body>
+</html>

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Themes Login Hotspot By Codekece">
+    <meta name="author" content="Shohibul Amin">
+    <link rel="shortcut icon" href="favicon.png">
+    <title>Welcome to peniel beach hotel</title>
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <link href="dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="dist/css/style.css" rel="stylesheet">
+    <script>
+      $(document).ready(function() {
+        if (jQuery.browser.mobile) {
+          window.location.href = '$(link-login-only)?dst=$(link-orig-esc)&target=mobile';
+        }
+      });
+    </script>
+  </head>
+
+  <body>
+    <!-- Voucher-based Authentication -->
+    <form name="sendin" action="$(link-login-only)" method="post">
+      <input type="hidden" name="username" />
+      <input type="hidden" name="dst" value="$(link-orig)" />
+      <input type="hidden" name="popup" value="true" />
+    </form>
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar top-bar"></span>
+            <span class="icon-bar middle-bar"></span>
+            <span class="icon-bar bottom-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">
+            <img src="img/logo_transparent.png" class="hidden-xs hidden-sm">
+            <img src="img/logo_transparent.png" class="hidden-md hidden-lg">
+          </a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="" data-toggle="modal" data-target="#ModalRestaurantMenu">Restaurant Menu</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Header -->
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-8 welcome">
+          <h1><span>Welcome to</span> Peneil Beach Hotel</h1>
+          <p>Peneiel Beach Hotel offers luxury travel experiences with personalised service in elegant properties, each individually curated to reflect its location.
+            <br/><br/>
+            A stay at Peneiel Beach Hotel offers more than just a holiday — it opens travellers to opportunities and inspirations in diverse parts of the world. At COMO, we strive to deliver experiences that are individual to you and the country you are visiting, from perennial city hotspots to off-beat destinations with distinct and memorable cultures.
+          </p>
+        </div>
+        <div class="col-xs-12 col-sm-4 col-md-4">
+          <div class="panel panel-login">
+            <div class="panel-heading">
+              <h1>Sign In</h1>
+            </div>
+            <div class="panel-body">
+              $(if error)
+              <div class="alert alert-danger alert-dismissible" role="alert">
+                <button type="button" class="close" data-dismiss="alert">
+                  <span aria-hidden="true">&times;</span>
+                  <span class="sr-only">Close</span>
+                </button>
+                $(error).
+              </div>
+              $(endif)
+
+              <p class="text-center">Use 'Voucher Code' to authenticate internet access</p>
+              <hr/>
+              <form role="form" name="login" action="$(link-login-only)" method="post">
+                <input type="hidden" name="dst" value="$(link-orig)" />
+                <input type="hidden" name="popup" value="true" />
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="fa fa-at fa-fw"></i></span>
+                  <input type="text" name="username" class="form-control" placeholder="Voucher Code" required>
+                </div>
+                <button type="submit" id="loading-example-btn" data-loading-text="Loading..." class="btn btn-default btn-block">Login</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="container">
+        <p class="text-center">&copy; 2024 By penielbeachotel.com</p>
+      </div>
+    </div>
+
+   <!-- Modal Restaurant -->
+<div class="modal fade" id="ModalRestaurantMenu" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-lg">
+	  <div class="modal-content">
+		<div class="modal-header">
+		  <button type="button" class="close" data-dismiss="modal">
+			<span aria-hidden="true">&times;</span>
+			<span class="sr-only">Close</span>
+		  </button>
+		  <h3 class="modal-title" id="myModalLabel"><i class="fa fa-cutlery fa-fw"></i> Restaurant Menu</h3>
+		</div>
+		<div class="modal-body">
+		  <div class="alert alert-success" role="alert">
+			<i class="fa fa-info-circle fa-2x pull-left fa-border"></i>
+			Welcome to our restaurant! Enjoy a selection of dishes prepared with the finest ingredients.<br/> Explore our menu below and choose your favorite meal!
+		  </div>
+		  
+		  <!-- Menu Table -->
+		  <table class="table table-hover table-bordered" border="0">
+			<thead>
+			  <tr>
+				<th>#</th>
+				<th>Dish</th>
+				<th>Description</th>
+				<th>Price</th>
+			  </tr>
+			</thead>
+			<tbody>
+			  <tr>
+				<td>1</td>
+				<td>Grilled Chicken</td>
+				<td>Juicy grilled chicken served with a side of vegetables.</td>
+				<td>$10.00</td>
+			  </tr>
+			  <tr>
+				<td>2</td>
+				<td>Wet whole Fish</td>
+				<td>Rice , Smashed irish potato, Posho, Matooke.</td>
+				<td>$15.00</td>
+			  </tr>
+			  <tr>
+				<td>3</td>
+				<td>Caesar Salad</td>
+				<td>Crispy romaine lettuce, Parmesan, croutons, and Caesar dressing.</td>
+				<td>$7.00</td>
+			  </tr>
+			  <tr>
+				<td>4</td>
+				<td>Beef Burger</td>
+				<td>Grilled beef patty with lettuce, tomato, and cheese on a toasted bun.</td>
+				<td>$9.00</td>
+			  </tr>
+			  <tr>
+				<td>5</td>
+				<td>Spaghetti Bolognese</td>
+				<td>Pasta with a rich meat-based tomato sauce and Parmesan cheese.</td>
+				<td>$12.00</td>
+			  </tr>
+			</tbody>
+		  </table>
+  
+		  <h4 style="color:#333;"><i class="fa fa-pencil-square-o fa-fw"></i> How to Order</h4>
+		  <ul>
+			<li>Contact us by <i class="fa fa-phone-square fa-fw"></i> or <i class="fa fa-envelope fa-fw"></i> at <code>623</code>
+			  <br /> Format of ordering: <strong>ORDER <code>&lt;space&gt;</code> Your dish selection <code>&lt;space&gt;</code> Quantity</strong>.
+			  Example: <code>ORDER Grilled Chicken 2</code>intercom call on <code>623</code>
+			</li>
+			<li>Visit our restaurant directly <code>Opposite the Reception</code></li>
+		  </ul>
+		</div>
+	  </div>
+	</div>
+  </div>
+  
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="dist/js/bootstrap.min.js"></script>
+    <script src="assets/js/jquery.backstretch.js"></script>
+    <script>
+      $(window).load(function() {
+        $('#ModalRestaurantMenu').modal('');
+      });
+
+      $.backstretch([
+        "img/background.jpg",
+        "img/back.jpg",
+        "img/bed.jpg",
+        "img/4.jpg"
+      ], {
+        fade: 850,
+        duration: 4000
+      });
+    </script>
+  </body>
+</html>

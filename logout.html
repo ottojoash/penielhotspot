@@ -1,0 +1,74 @@
+<html>
+	<head>
+		$(if refresh-timeout)
+		<meta http-equiv="refresh" content="$(refresh-timeout-secs)">
+		$(endif)
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="Themes Login Hotspot By Codekece">
+		<meta name="author" content="Shohibul Amin">
+		<link rel="shortcut icon" href="favicon.png">
+		<title>Thanks | Codekece Hotel & Resort</title>
+		<link rel="stylesheet" href="assets/css/font-awesome.min.css">
+		<link href="dist/css/bootstrap.min.css" rel="stylesheet">
+		<link href="dist/css/style.css" rel="stylesheet">
+		
+		<script language="JavaScript">
+		<!--
+			function openLogin() {
+			if (window.name != 'hotspot_logout') return true;
+			open('$(link-login)', '_blank', '');
+			window.close();
+			return false;
+			}
+		//-->
+		</script>
+		
+	</head>
+	<body>
+		
+		<div class="container">
+			<div class="row">
+				<div class="col-md-offset-4 col-md-4">
+					<div class="panel panel-login">
+						<div class="panel-heading">
+							<h1>Thanks <i class="fa fa-smile-o"></i></h1>
+						</div>
+						<div class="panel-body">				
+							<form action="$(link-login)" name="login" onSubmit="return openLogin()">
+								<div class="text-center">
+									<p><h4>$(username) You have just logged out.</h4></br>
+									Thank you, hopefully you are satisfied with our hotel services, do not forget to come back.</p>
+								</div>
+								<button type="submit" class="btn btn-default btn-block">LOGIN</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="footer">
+			<div class="container">
+				<p class="text-center">
+					&copy; 2017 By penielbeachotel.com
+				</p>
+			</div>
+		</div>
+		
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="dist/js/bootstrap.min.js"></script>	
+		<script src="assets/js/jquery.backstretch.js"></script>
+		<script>
+			$.backstretch([
+			  "img/1.jpg",
+			  "img/2.jpg",
+			  "img/3.jpg"
+			  ], {
+				fade: 750,
+				duration: 4000
+			});
+		</script>
+	</body>
+</html>
